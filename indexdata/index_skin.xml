@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<krpano version="1.19-pr16">
+<krpano version="1.21.2">
 
     
   <!-- Spot Style - ponto -->
@@ -1721,14 +1721,15 @@ getmessage(urltoopen,logo3websiteurl);openurl(get(urltoopen),_blank);
          keep="true"
          url="%FIRSTXML%/graphics/gyrobutton/gyro_b.png" 
          align="bottom"
-         x="10"
-         y="10"
+         x="0"
+         y="15"
          zorder="18"
          tooltip=""
          onhover="gyroButtonOnHover"
          state="true"
          onclick="gyroButtonOnClick"
-         onout="hideTooltip();"
+         onover="tween(scale, 1.2,0.5,easeOutQuad);"
+         onout="hideTooltip();tween(scale, 1.0,0.5,easeOutQuad);"
          height="35"
          width="35"
          visible="false"
@@ -1857,11 +1858,6 @@ getmessage(urltoopen,logo3websiteurl);openurl(get(urltoopen),_blank);
   </action>
 
 
-  <!-- FLOORPLAN -->
-  <action name="hideFloorplan">set(tour_displayfloorplan, false);events.dispatch(onhidetourfloorplan);</action>
-  <action name="showFloorplan">set(tour_displayfloorplan, true); events.dispatch(onshowtourfloorplan);</action>
-
-
   <!-- Fullscreen Management -->
   <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
   <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
@@ -1878,5 +1874,10 @@ getmessage(urltoopen,logo3websiteurl);openurl(get(urltoopen),_blank);
   <action name="enterFullScreenFallback">set(fullscreen,true);</action>
   
   <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
+
+  <!-- FLOORPLAN -->
+  <action name="hideFloorplan">set(tour_displayfloorplan, false);events.dispatch(onhidetourfloorplan);</action>
+  <action name="showFloorplan">set(tour_displayfloorplan, true); events.dispatch(onshowtourfloorplan);</action>
+
 
 </krpano>

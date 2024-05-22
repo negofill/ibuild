@@ -19,7 +19,7 @@
   <krpano tour_gyroscopedevices="true" devices="no-desktop.and.html5" />
   <krpano tour_vrdevices="true" devices="html5" />
   <krpano videos_sounds_path="%FIRSTXML%" devices="html5" />
-  <krpano videos_sounds_path="%SWFPATH%" devices="flash" />
+  <krpano videos_sounds_path="%VIEWER%" devices="flash" />
   <krpano projection_current_params="view.fisheyefovlink=0.5&amp;view.architectural=0.0&amp;view.pannini=0.0&amp;view.fisheye=0.0&amp;view.stereographic=false" />
 
 
@@ -27,13 +27,12 @@
 
 
   <krpano vrtourdevice.desktop="desktop" vrtourdevice.tablet="tablet" vrtourdevice.mobile="mobile" />
-  <krpano vrtourdevicescale.desktop="1.0" vrtourdevicescale.tablet="1.0" vrtourdevicescale.mobile="2.0" />
+  <krpano vrtourdevicescale.desktop="1.0" vrtourdevicescale.tablet="1.0" vrtourdevicescale.mobile="1.0" />
   <action name="vrtourcurrentscale" autorun="preinit">
     mul(stagescale,get(vrtourdevicescale));
   </action>
 
   <!-- Control Mode Management -->
-  <control mouse="moveto" touch="drag" />
   <action name="setControlModeDragTo">setControlMode(drag);</action>
   <action name="setControlModeMoveTo">setControlMode(moveto);</action>
   <action name="setControlMode">
@@ -46,7 +45,6 @@
     );
     events.dispatch(oncontrolmodechanged);
   </action>
-
 
 
   <!-- Tour Messages -->
@@ -155,8 +153,6 @@
 
 
 
-
-
   <krpano panovideospotsstate="false" />
   <krpano panolivepanospotsstate="false" />
   <events name="panoVideosSpotsStateEvent" onTourStart="set(panovideospotsstate, true);set(panolivepanospotsstate, true);" keep="true" />
@@ -168,7 +164,6 @@
   <action name="mainloadscene">
     if (xml.scene != %1,
       events.dispatch(onleavingscene, true);
-
       interruptAnimation();
 
 
@@ -815,40 +810,17 @@ stopautorotation();
     );
   </action>
   <!-- Change Cursors Appearance -->
-
   <action name="setarrowcursors">
-    if (device.flash,
-      ifnot(device.mac,
-        set(cursors.url  , %FIRSTXML%/graphics/cursors_move.png);
-        set(cursors.type , 8way);
-        set(cursors.move    ,   0|0|16|16);
-        set(cursors.drag    ,  16|0|16|16);
-        set(cursors.arrow_u ,  32|0|16|16);
-        set(cursors.arrow_d ,  48|0|16|16);
-        set(cursors.arrow_l ,  64|0|16|16);
-        set(cursors.arrow_r ,  80|0|16|16);
-        set(cursors.arrow_lu,  96|0|16|16);
-        set(cursors.arrow_ru, 112|0|16|16);
-        set(cursors.arrow_rd, 128|0|16|16);
-        set(cursors.arrow_ld, 144|0|16|16);
-      );
-    ,
-      js(kpanotour.Cursors.setMoveCursor());
-    );
+    set(cursors.standard, all-scroll);
+    set(cursors.dragging, all-scroll);
   </action>
   <action name="sethandcursors">
-    if (device.flash,
-      ifnot(device.mac,
-        set(cursors.url , %FIRSTXML%/graphics/cursors_drag.png);
-        set(cursors.type, 2way);
-        set(cursors.move,  0|0|32|32);
-        set(cursors.drag, 32|0|32|32);
-      );
-    ,
-      js(kpanotour.Cursors.setDragCursor());
-    );
+    set(cursors.standard, grab);
+    set(cursors.dragging, grab);
   </action>
 
 
+
+	<contextmenu versioninfo="true" />
 
 </krpano>
