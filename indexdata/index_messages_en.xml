@@ -23,6 +23,15 @@
   <data name="en_pano47_title"><![CDATA[Beachtennis]]></data>
   <data name="en_pano52_title"><![CDATA[Parqueinfantil]]></data>
   <data name="en_pano48_title"><![CDATA[Brinquedoteca]]></data>
+  <data name="en_pano342_title"><![CDATA[Academia]]></data>
+  <data name="en_pano356_title"><![CDATA[SalaodeFestas]]></data>
+
+  <data name="en_panogroup364_title"><![CDATA[Apartamento]]></data>
+
+  <data name="en_pano347_title"><![CDATA[Estar Jantar]]></data>
+  <data name="en_pano355_title"><![CDATA[Quarto]]></data>
+  <data name="en_pano357_title"><![CDATA[Suite]]></data>
+  <data name="en_pano358_title"><![CDATA[Varanda]]></data>
 
 
 
@@ -39,6 +48,8 @@
 	<data name="en_spotmap197_tooltip"><![CDATA[]]></data>
 	<data name="en_spotmap198_tooltip"><![CDATA[]]></data>
 	<data name="en_spotmap199_tooltip"><![CDATA[]]></data>
+	<data name="en_spotmap377_tooltip"><![CDATA[]]></data>
+	<data name="en_spotmap379_tooltip"><![CDATA[]]></data>
 
 
   <data name="en_contextmenuopenFsLabel"><![CDATA[Enter Fullscreen]]></data>
@@ -148,6 +159,14 @@
   <data name="en_vr_setup_cb7"><![CDATA[Successful calibration]]></data>
   <data name="en_vr_setup_cb8"><![CDATA[Calibration failed]]></data>
   <data name="en_vr_setup_unavailable"><![CDATA[VR mode[br]is unavailable on your device]]></data>
+
+
+
+
+
+
+
+
 
 
 

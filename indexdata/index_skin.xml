@@ -907,7 +907,7 @@ Version 3.2, tested with PTP 2.5.7 on Linux
 							<spot name="spotmap190" posX="0.650264025" posY="0.932709992" heading="0" desc="spotmap190_tooltip" descType="tooltip" groupName="" isScene="true" planar="false" scene="pano56" jsClick="spotmap190ActionSpotFloorPlan">
 								<icon url="spots/pin_curved_2d_shadowed_user_defaultmap01.png" iconWidth="22" iconHeight="22" iconAnchor="center" />
 							</spot>
-							<spot name="spotmap191" posX="0.558875024" posY="0.297196001" heading="0" desc="spotmap191_tooltip" descType="tooltip" groupName="" isScene="true" planar="false" scene="pano52" jsClick="spotmap191ActionSpotFloorPlan">
+							<spot name="spotmap191" posX="0.55864197" posY="0.297208548" heading="0" desc="spotmap191_tooltip" descType="tooltip" groupName="" isScene="true" planar="false" scene="pano52" jsClick="spotmap191ActionSpotFloorPlan">
 								<icon url="spots/pin_curved_2d_shadowed_user_defaultmap01.png" iconWidth="22" iconHeight="22" iconAnchor="center" />
 							</spot>
 							<spot name="spotmap192" posX="0.295255005" posY="0.278504997" heading="0" desc="spotmap192_tooltip" descType="tooltip" groupName="" isScene="true" planar="false" scene="pano53" jsClick="spotmap192ActionSpotFloorPlan">
@@ -925,13 +925,19 @@ Version 3.2, tested with PTP 2.5.7 on Linux
 							<spot name="spotmap196" posX="0.578207016" posY="0.611214995" heading="0" desc="spotmap196_tooltip" descType="tooltip" groupName="" isScene="true" planar="false" scene="pano142" jsClick="spotmap196ActionSpotFloorPlan">
 								<icon url="spots/pin_curved_2d_shadowed_user_defaultmap01.png" iconWidth="22" iconHeight="22" iconAnchor="center" />
 							</spot>
-							<spot name="spotmap197" posX="0.609842002" posY="0.231775999" heading="0" desc="spotmap197_tooltip" descType="tooltip" groupName="" isScene="true" planar="false" scene="pano48" jsClick="spotmap197ActionSpotFloorPlan">
+							<spot name="spotmap197" posX="0.608024716" posY="0.234811172" heading="0" desc="spotmap197_tooltip" descType="tooltip" groupName="" isScene="true" planar="false" scene="pano48" jsClick="spotmap197ActionSpotFloorPlan">
 								<icon url="spots/pin_curved_2d_shadowed_user_defaultmap01.png" iconWidth="22" iconHeight="22" iconAnchor="center" />
 							</spot>
 							<spot name="spotmap198" posX="0.233742997" posY="0.489719987" heading="0" desc="spotmap198_tooltip" descType="tooltip" groupName="" isScene="true" planar="false" scene="pano51" jsClick="spotmap198ActionSpotFloorPlan">
 								<icon url="spots/pin_curved_2d_shadowed_user_defaultmap01.png" iconWidth="22" iconHeight="22" iconAnchor="center" />
 							</spot>
 							<spot name="spotmap199" posX="0.233742997" posY="0.431775987" heading="0" desc="spotmap199_tooltip" descType="tooltip" groupName="" isScene="true" planar="false" scene="pano49" jsClick="spotmap199ActionSpotFloorPlan">
+								<icon url="spots/pin_curved_2d_shadowed_user_defaultmap01.png" iconWidth="22" iconHeight="22" iconAnchor="center" />
+							</spot>
+							<spot name="spotmap377" posX="0.476851851" posY="0.206896558" heading="0" desc="spotmap377_tooltip" descType="tooltip" groupName="" isScene="true" planar="false" scene="pano342" jsClick="spotmap377ActionSpotFloorPlan">
+								<icon url="spots/pin_curved_2d_shadowed_user_defaultmap01.png" iconWidth="22" iconHeight="22" iconAnchor="center" />
+							</spot>
+							<spot name="spotmap379" posX="0.476851851" posY="0.254515588" heading="0" desc="spotmap379_tooltip" descType="tooltip" groupName="" isScene="true" planar="false" scene="pano356" jsClick="spotmap379ActionSpotFloorPlan">
 								<icon url="spots/pin_curved_2d_shadowed_user_defaultmap01.png" iconWidth="22" iconHeight="22" iconAnchor="center" />
 							</spot>
 				</floorplanItem>
@@ -950,7 +956,7 @@ Version 3.2, tested with PTP 2.5.7 on Linux
 	</action>
 	
 	
-		<!-- floorplan main spots counter : 11 -->
+		<!-- floorplan main spots counter : 13 -->
 			<action name="spotmap189ActionSpotFloorPlan">if(xml.scene == pano47,if(ptplugin[floorPlanArea].isOpen,hideFloorplan();
 floorPlanActivateDefaultSpot();););
           mainloadscene(pano47);lookat(get(panoview.h), get(panoview.v), get(panoview.fov));
@@ -1004,6 +1010,16 @@ floorPlanActivateDefaultSpot();););
 			<action name="spotmap199ActionSpotFloorPlan">if(xml.scene == pano49,if(ptplugin[floorPlanArea].isOpen,hideFloorplan();
 floorPlanActivateDefaultSpot();););
           mainloadscene(pano49);lookat(get(panoview.h), get(panoview.v), get(panoview.fov));
+
+</action>
+			<action name="spotmap377ActionSpotFloorPlan">if(xml.scene == pano342,if(ptplugin[floorPlanArea].isOpen,hideFloorplan();
+floorPlanActivateDefaultSpot();););
+          mainloadscene(pano342);lookat(get(panoview.h), get(panoview.v), get(panoview.fov));
+
+</action>
+			<action name="spotmap379ActionSpotFloorPlan">if(xml.scene == pano356,if(ptplugin[floorPlanArea].isOpen,hideFloorplan();
+floorPlanActivateDefaultSpot();););
+          mainloadscene(pano356);lookat(get(panoview.h), get(panoview.v), get(panoview.fov));
 
 </action>
 	
@@ -1577,6 +1593,91 @@ floorPlanActivateDefaultSpot();););
 								<option name="item_hover_bg_alpha" value="0.41568627450980394" type="float" />
 						
 						</item>
+						<item name="group_1_item_12"
+							action="invokeKrFunction('mainloadscene', 'pano342')"
+								titleID="pano342_title"
+								thumbnail="indexdata/academia_342/thumbnail.jpg"
+							cssClass="pano342">
+						
+								<option name="item_out_bg_color" value="017876" type="string" />
+								<option name="item_out_bg_alpha" value="0.41568627450980394" type="float" />
+								<option name="item_hover_bg_color" value="006462" type="string" />
+								<option name="item_hover_bg_alpha" value="0.41568627450980394" type="float" />
+						
+						</item>
+						<item name="group_1_item_13"
+							action="invokeKrFunction('mainloadscene', 'pano356')"
+								titleID="pano356_title"
+								thumbnail="indexdata/salaodefestas_356/thumbnail.jpg"
+							cssClass="pano356">
+						
+								<option name="item_out_bg_color" value="017876" type="string" />
+								<option name="item_out_bg_alpha" value="0.41568627450980394" type="float" />
+								<option name="item_hover_bg_color" value="006462" type="string" />
+								<option name="item_hover_bg_alpha" value="0.41568627450980394" type="float" />
+						
+						</item>
+					
+						<option name="background_color" value="017876" type="string" />
+						<option name="background_alpha" value="0.41568627450980394" type="float" />
+					
+				</group>
+				<group name="group_2"
+						titleID="panogroup364_title"
+						thumbnail=""
+						subMenu="true"
+						cssClass="panogroup364"> 
+
+				
+				
+						<item name="group_2_item_1"
+							action="invokeKrFunction('mainloadscene', 'pano347')"
+								titleID="pano347_title"
+								thumbnail="indexdata/estar_jantar_347/thumbnail.jpg"
+							cssClass="pano347">
+						
+								<option name="item_out_bg_color" value="017876" type="string" />
+								<option name="item_out_bg_alpha" value="0.41568627450980394" type="float" />
+								<option name="item_hover_bg_color" value="006462" type="string" />
+								<option name="item_hover_bg_alpha" value="0.41568627450980394" type="float" />
+						
+						</item>
+						<item name="group_2_item_2"
+							action="invokeKrFunction('mainloadscene', 'pano355')"
+								titleID="pano355_title"
+								thumbnail="indexdata/quarto_355/thumbnail.jpg"
+							cssClass="pano355">
+						
+								<option name="item_out_bg_color" value="017876" type="string" />
+								<option name="item_out_bg_alpha" value="0.41568627450980394" type="float" />
+								<option name="item_hover_bg_color" value="006462" type="string" />
+								<option name="item_hover_bg_alpha" value="0.41568627450980394" type="float" />
+						
+						</item>
+						<item name="group_2_item_3"
+							action="invokeKrFunction('mainloadscene', 'pano357')"
+								titleID="pano357_title"
+								thumbnail="indexdata/suite_357/thumbnail.jpg"
+							cssClass="pano357">
+						
+								<option name="item_out_bg_color" value="017876" type="string" />
+								<option name="item_out_bg_alpha" value="0.41568627450980394" type="float" />
+								<option name="item_hover_bg_color" value="006462" type="string" />
+								<option name="item_hover_bg_alpha" value="0.41568627450980394" type="float" />
+						
+						</item>
+						<item name="group_2_item_4"
+							action="invokeKrFunction('mainloadscene', 'pano358')"
+								titleID="pano358_title"
+								thumbnail="indexdata/varanda_358/thumbnail.jpg"
+							cssClass="pano358">
+						
+								<option name="item_out_bg_color" value="017876" type="string" />
+								<option name="item_out_bg_alpha" value="0.41568627450980394" type="float" />
+								<option name="item_hover_bg_color" value="006462" type="string" />
+								<option name="item_hover_bg_alpha" value="0.41568627450980394" type="float" />
+						
+						</item>
 					
 						<option name="background_color" value="017876" type="string" />
 						<option name="background_alpha" value="0.41568627450980394" type="float" />
@@ -1823,6 +1924,19 @@ getmessage(urltoopen,logo3websiteurl);openurl(get(urltoopen),_blank);
 	</action>
 
 
+  <!-- FLOORPLAN -->
+  <action name="hideFloorplan">set(tour_displayfloorplan, false);events.dispatch(onhidetourfloorplan);</action>
+  <action name="showFloorplan">set(tour_displayfloorplan, true); events.dispatch(onshowtourfloorplan);</action>
+
+
+  <action name="enableGyroscope">
+    changeGyroscopeState(true);
+  </action>
+  <action name="disableGyroscope">
+    changeGyroscopeState(false);
+  </action>
+
+
 	<!-- WebVR plugin for VR availability tests -->
 
 	<plugin name="ptpvrmode" devices="html5" keep="true"
@@ -1850,14 +1964,6 @@ getmessage(urltoopen,logo3websiteurl);openurl(get(urltoopen),_blank);
 		set(tour_vrdevices, false);
 		events.dispatch(onvrunavailable);
 	</action>
-  <action name="enableGyroscope">
-    changeGyroscopeState(true);
-  </action>
-  <action name="disableGyroscope">
-    changeGyroscopeState(false);
-  </action>
-
-
   <!-- Fullscreen Management -->
   <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
   <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
@@ -1874,10 +1980,5 @@ getmessage(urltoopen,logo3websiteurl);openurl(get(urltoopen),_blank);
   <action name="enterFullScreenFallback">set(fullscreen,true);</action>
   
   <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
-
-  <!-- FLOORPLAN -->
-  <action name="hideFloorplan">set(tour_displayfloorplan, false);events.dispatch(onhidetourfloorplan);</action>
-  <action name="showFloorplan">set(tour_displayfloorplan, true); events.dispatch(onshowtourfloorplan);</action>
-
 
 </krpano>
